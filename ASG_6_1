@@ -1,0 +1,50 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+struct Student
+{
+    char name;
+    int age;
+    int degree;
+    int section;
+} s1[5];
+
+void PrintArray(struct student *s, int size)
+{
+    for (int i = 1; i <= 5; i++)
+    {
+        printf("\nStudent %d\n", i);
+        printf("Name : %c", s1[i].name);
+        printf("Age : %d", s1[i].age);
+        printf("Degree : %d", s1[i].degree);
+        printf("Section : %d", s1[i].section);
+    }
+}
+
+int main()
+{
+    int size = 5;
+    for (int i = 1; i < 6; i++)
+    {
+
+        printf("\nStudent %d\n", i);
+
+        printf("Name : \n");
+        scanf(" %c", &s1[i].name);
+
+        fflush(stdin);
+        printf("Age : \n");
+        scanf("%d", &s1[i].age);
+
+        fflush(stdin);
+        printf("Degree : \n");
+        scanf("%d", &s1[i].degree);
+
+        fflush(stdin);
+        printf("Section : \n");
+        scanf("%d", &s1[i].section);
+    }
+
+    PrintArray(s1, size);
+}

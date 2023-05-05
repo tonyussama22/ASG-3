@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+typedef struct {
+    float real;
+    float imag;
+} Complex;
+
+int main() {
+    Complex num1, num2, result;
+
+    printf("For First Complex Number:\n");
+    printf("Real part: ");
+    scanf("%f", &num1.real);
+    printf("Imaginary part: ");
+    scanf("%f", &num1.imag);
+
+    printf("For Second Complex Number:\n");
+    printf("Real part: ");
+    scanf("%f", &num2.real);
+    printf("Imaginary part: ");
+    scanf("%f", &num2.imag);
+
+    result.real = num1.real + num2.real;
+    result.imag = num1.imag + num2.imag;
+
+    printf("Sum = %.2f + %.2fi\n", result.real, result.imag);
+}
